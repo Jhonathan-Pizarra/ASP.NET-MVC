@@ -1,0 +1,39 @@
+﻿@model WebApp_FormsNoTipados.Models.Articulo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DatosArticulo</title>
+</head>
+<body>
+    <div>
+        <!--El método BeginForm podemos indicar el nombre de la acción y el controlador que lo procesará, además la forma de envío de los datos (Post o Get)-->
+        @using (Html.BeginForm("ModificacionArticulo", "Home", FormMethod.Post))
+        {
+            <p>
+                Codigo de articulo:
+                @Html.Display("Codigo")
+                @Html.Hidden("Codigo")
+            </p>
+            <p>
+                Descripcion:
+                @Html.TextBox("Descripcion")
+            </p>
+            <p>
+                Precio:
+                @Html.TextBox("Precio")
+            </p>
+            <p>
+                <input type="submit" value="Confirmar" />
+            </p>
+        }
+        <!--Un problema que surge cuando utilizamos Helpers no fuertemente tipados es que los errores los descubriremos en tiempos de ejecutemosm, no de ejecución, por tanto el programa se ejecutará pero quizás puede que no funcione como espeamos-->
+    </div>
+</body>
+</html>

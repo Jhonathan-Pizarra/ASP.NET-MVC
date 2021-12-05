@@ -1,0 +1,54 @@
+Basicos:
+- Controlador
+
+Comentarios:
+- Controlador
+- Vista
+
+Razor:
+- Controlador
+- Vista
+- Modelo
+
+SQLSupermercado
+- Conexión a Bdd
+- CRUD
+
+SQLZapateria
+- Conexión a Bdd
+- Bootstrap
+- Plantillas para vistas (Ya no hacemos en blanco)
+
+SQLClientes
+- ActionLinks
+- Helpers
+
+Proveedores
+- ActionLinks multiples
+- Helpers + Forms
+
+FromsNoTipados
+- Forms
+- Método Search
+
+Forms
+- HtmlHelper
+- Vistas Not Found
+
+12.-RegistroCivil
+- Edit/EditFor
+- Precargar datos antes de Modificar
+
+13.-Validaciones
+- DataAnotations
+- Error Messages
+
+14.-ListaErrores
+- Lista errroores  
+
+15.-WebSite
+- Vistas compartidas
+- Layout
+
+16.-Parciales
+- Vistas reutilizables

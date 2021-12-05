@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tabla</title>
+</head>
+<body>
+    <div>
+        @for (var x = ViewBag.Tabla; x <= 10 * ViewBag.Tabla; x = x + ViewBag.Tabla)
+        {
+            @x <br />
+        }
+    </div>
+</body>
+</html>

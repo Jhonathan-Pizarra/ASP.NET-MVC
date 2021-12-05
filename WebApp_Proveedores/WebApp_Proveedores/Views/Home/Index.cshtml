@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Tablas de multiplicar del 2 al 10</h1>
+        <!--Lo nuevo en este problema es la sintaxis que debemos utilizar si queremos pasar parámetros en la URL del enlace:-->
+        <!--Debemos crear un objeto anónimo con la palabra clave new y entre llaves indicar el parámetro y su valor.-->
+        @for (var x = 2; x <= 10; x++)
+        {
+            @Html.ActionLink("Tabla del " + @x, "Tabla", new { valor = @x }) <br />
+        }
+        <!--Varoamtes-->
+        <!--   <a href="/Home/Tabla?valor=2" style="font-size:30px" target="_blank">Tabla del 2</a> -->
+        <!---->
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{ Html.BeginForm(); }
+        <!--  Html.BeginForm() es equivalente a <form action="/Home/Index" method="post">-->
+        <p>
+            Ingrese el código de articulo a buscar:
+            @Html.TextBox("Codigo")
+            <!-- Html.TextBox("Codigo") es esquivalente a: <input id="Codigo" name="Codigo" type="text" value="" />-->
+        </p>
+        <p>
+            <input type="submit" value="Buscar" />
+        </p>
+        @{ Html.EndForm(); }
+        <!-- Html.EndForm(); es equivalnte a: </form>-->
+    </div>
+    <!--Otra forma de hacerlo, alternativa es:
+    <div>
+        @* @Coment @using (Html.BeginForm()) *@
+        {
+        < p >
+        Ingrese el código de articulo a buscar:
+        @* @Html.TextBox("Codigo") *@
+        </ p >
+                < p >
+                    < input type = "submit" value = "Buscar" />
+               </ p >
+         }
+     </div>
+    -->
+
+</body>
+        </html>

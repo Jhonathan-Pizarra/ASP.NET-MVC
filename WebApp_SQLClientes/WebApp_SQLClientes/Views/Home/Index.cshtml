@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <!--En este caso estamos llamando a ActionLink pasando 3 string-->
+        <h1>Pagina principal.</h1>
+        <!--El primer parámetro es el texto que debe mostrar el enlace, el segundo es la acción que debe ejecutar y el tercer parámetro indica el controlador de dicha acción-->
+        @Html.ActionLink("Listado de clientes", "Listado", "Clientes")
+        <br />
+        @Html.ActionLink("Alta de clientes", "Alta", "Clientes")
+        <hr />
+        @Html.ActionLink("Listado de proveedores", "Listado", "Proveedores")
+        <br />
+        @Html.ActionLink("Alta de proveedores", "Alta", "Proveedores")
+    </div>
+</body>
+</html>

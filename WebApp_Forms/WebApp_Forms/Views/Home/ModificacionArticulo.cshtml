@@ -1,0 +1,37 @@
+﻿@model WebApp_Forms.Models.Articulo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModificacionArticulo</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ModificacionArticulo", "Home", FormMethod.Post))
+        {
+            <p>
+                Codigo de articulo:
+                @Html.DisplayFor(model => model.Codigo)
+                @Html.HiddenFor(model => model.Codigo)
+            </p>
+            <p>
+                <!--El primer parámetro del método TextBoxFor es una expresión lambda a diferencia del primer parámetro del método TextBox que se trata de un string-->
+                Descripcion:
+                @Html.TextBoxFor(model => model.Descripcion)
+            </p>
+            <p>
+                Precio:
+                @Html.TextBoxFor(model => model.Precio)
+            </p>
+            <p>
+                <input type="submit" value="Confirmar" />
+            </p>
+        }
+    </div>
+</body>
+</html>

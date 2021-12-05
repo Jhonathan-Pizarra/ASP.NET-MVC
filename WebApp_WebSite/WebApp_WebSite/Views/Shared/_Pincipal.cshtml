@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Pincipal</title>
+</head>
+<body>
+    <!--
+    <div>
+        (arroba)RenderBody()
+    </div>
+    Donde está la llamada a la función RenderBody() es donde se mostrará la vista. Todo el resto que hay en el archivo será compartido y común a muchas páginas-->
+    <div>
+        @Html.ActionLink("Acerca de este sitio", "Index") -
+        @Html.ActionLink("Periódicos", "Periodicos") -
+        @Html.ActionLink("Buscadores", "Buscadores") -
+        @Html.ActionLink("Blog", "Blogs")
+        <hr />
+        @RenderBody()
+        <hr />
+        <h3>Copyright 2018</h3>
+    </div>
+</body>
+</html>

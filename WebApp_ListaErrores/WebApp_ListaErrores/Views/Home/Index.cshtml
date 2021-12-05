@@ -1,0 +1,41 @@
+﻿@model WebApp_ListaErrores.Models.Persona
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        {
+            <p>
+                Ingrese Nombre:
+                @Html.EditorFor(model => model.Nombre)
+            </p>
+            <p>
+                Ingrese Edad (entre 1 y 18):
+                @Html.EditorFor(model => model.Edad)
+            </p>
+            <p>
+                Ingrese Email:
+                @Html.EditorFor(model => model.Email)
+            </p>
+            <p>
+                Ingrese género:
+                @Html.EditorFor(model => model.Genero)
+            </p>
+            <p>
+                <input type="submit" value="Confirmar" />
+            </p>
+        }
+    </div>
+</body>
+</html>
